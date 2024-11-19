@@ -1,0 +1,147 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.pinimg.com/736x/c8/19/ab/c819abe20c6af18c78c6702c595e6f4d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+}
+
+input, textarea, select, button {
+    padding: 12px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.clear-all-btn {
+    margin-top: 30px;
+    background-color: #f44336;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-all-btn:hover {
+    background-color: #e53935;
+}
+
+.relaxation-techniques {
+    background-color: #e0f7fa;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    font-size: 1.1rem;
+    color: #00796b;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.relaxation-techniques:hover {
+    background-color: #b2ebf2;
+}
+
+.techniques-list {
+    display: none;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.techniques-list p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.mood-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mood-btn {
+    font-size: 2.5rem;
+    margin: 12px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mood-btn:hover {
+    transform: scale(1.2);
+    color: #4CAF50;
+}
+
+.mood-display {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.top-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    cursor: pointer;
+}

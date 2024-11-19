@@ -1,204 +1,15 @@
-<!DOCTYPE html>>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Sign Up / Task Manager</title>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://i.pinimg.com/736x/c8/19/ab/c819abe20c6af18c78c6702c595e6f4d.jpg'); /* Background image */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh; /* Full viewport height */
-        }
-
-        .container, .signup-container {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2 {
-            font-size: 2rem;
-            text-align: center;
-            color: #333;
-            font-weight: 700;
-        }
-
-        input, textarea, select, button {
-            padding: 12px;
-            margin: 8px 0;
-            width: 100%;
-            font-size: 1rem;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            transition: border-color 0.3s ease;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            border-color: #4CAF50;
-            outline: none;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .login-link a, .signup-btn {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-
-        .login-link a:hover, .signup-btn:hover {
-            text-decoration: underline;
-        }
-
-        .task-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .task-item {
-            background-color: #f9f9f9;
-            padding: 15px;
-            margin: 12px 0;
-            border-radius: 10px;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .task-item:hover {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .completed {
-            text-decoration: line-through;
-            color: #888;
-        }
-
-        .clear-all-btn {
-            margin-top: 30px;
-            background-color: #f44336;
-            color: white;
-            padding: 12px 25px;
-            font-size: 1.2rem;
-            text-align: center;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .clear-all-btn:hover {
-            background-color: #e53935;
-        }
-
-        .relaxation-techniques {
-            background-color: #e0f7fa;
-            padding: 20px;
-            margin-top: 15px;
-            border-radius: 10px;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-            font-size: 1.1rem;
-            color: #00796b;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .relaxation-techniques:hover {
-            background-color: #b2ebf2;
-        }
-
-        .techniques-list {
-            display: none;
-            margin-top: 15px;
-            font-size: 1rem;
-        }
-
-        .techniques-list p {
-            margin: 8px 0;
-            line-height: 1.5;
-        }
-
-        .mood-container {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .mood-btn {
-            font-size: 2.5rem;
-            margin: 12px;
-            cursor: pointer;
-            border: none;
-            background: transparent;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .mood-btn:hover {
-            transform: scale(1.2);
-            color: #4CAF50;
-        }
-
-        .mood-display {
-            font-size: 1.2rem;
-            color: #333;
-        }
-
-        .top-left {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #4CAF50;
-            cursor: pointer;
-        }
-
-    </style>
 </head>
 <body>
-
-    <!-- Login and Signup Section -->
-    <div id="loginContainer" class="container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <input type="text" id="loginUsername" name="username" placeholder="Username" required>
-            <input type="password" id="loginPassword" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <div class="register-link">
-            <p>Don't have an account? <a href="#" id="showSignup">Register here</a></p>
-        </div>
-    </div>
-
-    <div id="signupContainer" class="signup-container" style="display:none;">
-        <h1>Sign Up</h1>
-        <form id="signupForm">
-            <input type="text" id="username" placeholder="Enter your username" required>
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <input type="password" id="password" placeholder="Enter your password" required>
-            <button type="submit" class="signup-btn">Sign Up</button>
-        </form>
-        <div class="login-link">Already have an account? <a href="#" id="showLogin">Login here</a></div>
-    </div>
-
-    <!-- Task Manager Page (visible after successful login or signup) -->
-    <div id="taskManagerPage" class="container" style="display:none;">
+    <!-- Relaxation Techniques -->
+    <div id="taskManagerPage" class="container">
         <div class="top-left" onclick="toggleTechniquesList()">Try Relaxation Techniques</div>
 
         <div class="relaxation-techniques">
@@ -212,6 +23,7 @@
             </div>
         </div>
 
+        <!-- Mood Tracker -->
         <div class="mood-container">
             <h2>How is your mood today?</h2>
             <button class="mood-btn" id="happy">😊</button>
@@ -222,6 +34,7 @@
             <div class="mood-display" id="moodDisplay"></div>
         </div>
 
+        <!-- Task Manager -->
         <div class="form-container">
             <input type="text" id="taskTitle" placeholder="Task Title" required>
             <textarea id="taskDescription" placeholder="Task Description" required></textarea>
@@ -231,122 +44,143 @@
                 <option value="medium">Medium</option>
                 <option value="low">Low</option>
             </select>
-            <button onclick="addTask()">Add Task</button>
+            <button id="addTaskButton">Add Task</button>
         </div>
 
         <ul class="task-list" id="taskList"></ul>
-        <button class="clear-all-btn" onclick="clearAllTasks()">Clear All Tasks</button>
     </div>
 
-    <script>
-        // Show Sign-Up Form
-        document.getElementById('showSignup').addEventListener('click', function() {
-            document.getElementById('loginContainer').style.display = 'none';
-            document.getElementById('signupContainer').style.display = 'block';
-        });
+    <script type="module">
+        import { auth, db } from "./firebase.js";
+        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+        import {
+            doc,
+            getDoc,
+            updateDoc,
+            arrayUnion,
+            arrayRemove
+        } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
-        // Show Login Form
-        document.getElementById('showLogin').addEventListener('click', function() {
-            document.getElementById('loginContainer').style.display = 'block';
-            document.getElementById('signupContainer').style.display = 'none';
-        });
+        const taskList = document.getElementById("taskList");
+        const addTaskButton = document.getElementById("addTaskButton");
 
-        // Handle Login Form Submission
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Add your validation logic here
-            document.getElementById('loginContainer').style.display = 'none';
-            document.getElementById('taskManagerPage').style.display = 'block';
-        });
+        // Add Task
+        async function addTask() {
+            const user = auth.currentUser;
 
-        // Handle Sign Up Form Submission
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Add your validation logic here
-            document.getElementById('signupContainer').style.display = 'none';
-            document.getElementById('taskManagerPage').style.display = 'block';
-        });
+            if (!user) {
+                alert("You must be logged in to add tasks.");
+                return;
+            }
 
-        // Toggle Relaxation Techniques List
-        function toggleTechniquesList() {
-            const techniquesList = document.getElementById('techniquesList');
-            techniquesList.style.display = techniquesList.style.display === 'none' ? 'block' : 'none';
+            const taskName = document.getElementById("taskTitle").value;
+            const taskDescription = document.getElementById("taskDescription").value;
+
+            if (!taskName || !taskDescription) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            const userRef = doc(db, "users", user.uid);
+
+            await updateDoc(userRef, {
+                "task-name": arrayUnion(taskName),
+                "task description": arrayUnion(taskDescription)
+            });
+
+            alert("Task added!");
+            fetchTasks();
         }
 
-        // Mood Tracker Buttons
-        document.getElementById('happy').addEventListener('click', function() { setMood('Happy'); });
-        document.getElementById('sad').addEventListener('click', function() { setMood('Sad'); });
-        document.getElementById('angry').addEventListener('click', function() { setMood('Angry'); });
-        document.getElementById('tiring').addEventListener('click', function() { setMood('Tiring'); });
-        document.getElementById('cool').addEventListener('click', function() { setMood('Cool'); });
+        // Fetch Tasks
+        async function fetchTasks() {
+            const user = auth.currentUser;
 
-        function setMood(mood) {
-            document.getElementById('moodDisplay').innerText = 'Your current mood is: ' + mood;
-        }
+            if (!user) {
+                alert("You must be logged in to fetch tasks.");
+                return;
+            }
 
-        // Task Management Logic
-        let tasks = [];
+            const userRef = doc(db, "users", user.uid);
+            const userSnap = await getDoc(userRef);
 
-        function addTask() {
-            const title = document.getElementById('taskTitle').value;
-            const description = document.getElementById('taskDescription').value;
-            const deadline = document.getElementById('taskDeadline').value;
-            const priority = document.getElementById('taskPriority').value;
+            if (userSnap.exists()) {
+                const data = userSnap.data();
+                const tasks = data["task description"].map((desc, index) => ({
+                    name: data["task-name"][index],
+                    description: desc
+                }));
 
-            if (title && description && deadline && priority) {
-                const task = {
-                    id: Date.now(),
-                    title,
-                    description,
-                    deadline,
-                    priority,
-                    completed: false,
-                };
-
-                tasks.push(task);
-                renderTasks();
-                clearTaskForm();
+                renderTasks(tasks);
+            } else {
+                alert("No tasks found for this user.");
             }
         }
 
-        function renderTasks() {
-            const taskListElement = document.getElementById('taskList');
-            taskListElement.innerHTML = '';
-            tasks.forEach(task => {
-                const taskElement = document.createElement('li');
-                taskElement.classList.add('task-item');
-                if (task.completed) taskElement.classList.add('completed');
-                taskElement.innerHTML = ` 
-                    <strong>${task.title}</strong> - ${task.priority} priority
-                    <p>${task.description}</p>
-                    <p>Due: ${task.deadline}</p>
-                    <button onclick="toggleTaskCompletion(${task.id})">${task.completed ? 'Undo' : 'Complete'}</button>
+        // Render Tasks
+        function renderTasks(tasks) {
+            taskList.innerHTML = ""; // Clear existing tasks
+
+            tasks.forEach((task) => {
+                const taskItem = document.createElement("li");
+                taskItem.classList.add("task-item");
+
+                taskItem.innerHTML = `
+                    <div>
+                        <strong>${task.name}</strong>
+                        <p>${task.description}</p>
+                    </div>
+                    <button class="mark-complete-btn">Complete</button>
+                    <button class="delete-task-btn">Delete</button>
                 `;
-                taskListElement.appendChild(taskElement);
+
+                taskList.appendChild(taskItem);
+
+                // Mark as complete
+                taskItem.querySelector(".mark-complete-btn").addEventListener("click", () => {
+                    alert(`${task.name} marked as complete!`);
+                });
+
+                // Delete task
+                taskItem.querySelector(".delete-task-btn").addEventListener("click", () => {
+                    deleteTask(task.name, task.description);
+                });
             });
         }
 
-        function toggleTaskCompletion(taskId) {
-            const task = tasks.find(t => t.id === taskId);
-            if (task) {
-                task.completed = !task.completed;
-                renderTasks();
+        // Delete Task
+        async function deleteTask(taskName, taskDescription) {
+            const user = auth.currentUser;
+
+            if (!user) {
+                alert("You must be logged in to delete tasks.");
+                return;
             }
+
+            const userRef = doc(db, "users", user.uid);
+
+            await updateDoc(userRef, {
+                "task-name": arrayRemove(taskName),
+                "task description": arrayRemove(taskDescription)
+            });
+
+            alert("Task deleted!");
+            fetchTasks();
         }
 
-        function clearAllTasks() {
-            tasks = [];
-            renderTasks();
-        }
+        // Fetch tasks on page load
+        window.addEventListener("load", () => {
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    fetchTasks();
+                } else {
+                    window.location.href = "login.html";
+                }
+            });
+        });
 
-        function clearTaskForm() {
-            document.getElementById('taskTitle').value = '';
-            document.getElementById('taskDescription').value = '';
-            document.getElementById('taskDeadline').value = '';
-            document.getElementById('taskPriority').value = 'medium';
-        }
+        // Add task button click event
+        addTaskButton.addEventListener("click", addTask);
     </script>
-
 </body>
 </html>
-
